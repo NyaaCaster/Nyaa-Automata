@@ -24,7 +24,7 @@
 ## 安装环境依赖
     apt update -y
     apt install git vim zip python3 python3-pip -y
-    wget https://nyaacaster.github.io/FisherHunter/overload_py/requirements.txt
+    wget https://nyaacaster.github.io/Nyaa-Automata/requirements.txt
     pip3 install -r requirements.txt
 
 ## 安装CC-attack
@@ -37,7 +37,7 @@
 ## 安装overload（ddos工具）
     git clone https://github.com/7zx/overload.git
     cd overload/
-    wget https://nyaacaster.github.io/FisherHunter/overload_py/overload_p.py
+    wget https://nyaacaster.github.io/Nyaa-Automata/overload_p.py
     cd ..
 
 - overload_p.py这个脚本可以自己打开看一下，里面我把手动输入的变量全部写死了以便当自动脚本使用，目标网址可以根据自己情况调整
