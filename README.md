@@ -1,4 +1,4 @@
-# Nyaa:Automata
+# Nyaa:Automata ![](https://img.shields.io/github/stars/NyaaCaster/HydaelynAttack?style=social)
 ## 菜鸟级CC+DDOS自动打击部署教程
 
 *制作工具是人类于其他动物的区别……但如何使用工具是人和人的区别……*
