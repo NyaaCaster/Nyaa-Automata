@@ -31,7 +31,7 @@ def main() -> None:
         #method = check_method_input()
         method = "HTTP"
         #time = check_number_input("time")
-        time = int(1000)
+        time = int(1500)
         #threads = check_number_input("threads" if method == "http" else "sockets")
         threads = int(500)
         use_proxy = check_proxy_input() if method == "http" else False
