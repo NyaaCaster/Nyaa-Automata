@@ -38,8 +38,8 @@ git clone https://github.com/Leeon123/CC-attack.git
 
 ## 获取Proxy-List的socks4和proxy喂料包
 ```shell
-curl -sSf "https://raw.githubusercontent.com/shiftytr/proxy-list/master/socks4.txt" > socks4.txt
-curl -sSf "https://raw.githubusercontent.com/shiftytr/proxy-list/master/proxy.txt" > proxy.txt
+curl https://raw.githubusercontent.com/TheSpeedX/SOCKS-List/master/socks4.txt -o socks4.txt
+curl https://raw.githubusercontent.com/TheSpeedX/SOCKS-List/master/http.txt -o proxy.txt
 ```
 ## 安装overload（ddos工具）
 ```shell
