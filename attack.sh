@@ -22,5 +22,5 @@ git pull
 cd ..
 
 echo ""
-echo "updata Nyaa-Automata"
-curl https://nyaacaster.github.io/Nyaa-Automata/a.sh -o a.sh
+echo "Nyaa-Automata"
+git pull
