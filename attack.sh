@@ -1,9 +1,5 @@
-echo "CC-attack"
-python3 ~/Nyaa-Automata/CC-attack/cc.py -url http://fwe22.top/ -f ~/Nyaa-Automata/proxy.txt -v 5 -s 30
-
-echo ""
-echo "HydaelynAttack"
-python3 ~/Nyaa-Automata/HydaelynAttack/HydaelynAttack_p_once_noLog.py
+echo "updata Nyaa-Automata"
+git pull
 
 echo ""
 echo "updata proxy"
@@ -22,5 +18,9 @@ git pull
 cd ..
 
 echo ""
-echo "updata Nyaa-Automata"
-git pull
+echo "CC-attack"
+python3 CC-attack/cc.py -url http://fwe22.top/ -f proxy.txt -v 5 -s 30
+
+echo ""
+echo "HydaelynAttack"
+python3 HydaelynAttack/HydaelynAttack_p_once_noLog.py
