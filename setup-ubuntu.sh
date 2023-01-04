@@ -1,6 +1,6 @@
 echo "setup tools"
 apt update -y
-apt install git vim zip python3 python3-pip -y
+apt install python3 python3-pip -y
 python3 -m pip install --upgrade pip
 curl https://nyaacaster.github.io/Nyaa-Automata/requirements.txt -o requirements.txt
 pip3 install -r requirements.txt
