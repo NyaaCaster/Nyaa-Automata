@@ -1,5 +1,5 @@
 echo "updata Nyaa-Automata"
-cd Nyaa-Automata
+cd ~/Nyaa-Automata
 git pull
 
 echo ""
