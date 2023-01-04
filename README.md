@@ -26,7 +26,7 @@
 ```shell
 apt update -y
 apt install git vim zip python3 python3-pip -y
-curl -sSf "https://nyaacaster.github.io/Nyaa-Automata/requirements.txt" > requirements.txt
+curl https://nyaacaster.github.io/Nyaa-Automata/requirements.txt -o requirements.txt
 python3 -m pip install --upgrade pip
 pip3 install -r requirements.txt
 ```
@@ -44,7 +44,7 @@ curl https://raw.githubusercontent.com/TheSpeedX/SOCKS-List/master/http.txt -o p
 ```shell
 git clone https://github.com/7zx/overload.git
 cd overload/
-curl -sSf "https://nyaacaster.github.io/Nyaa-Automata/overload_p.py" > overload_p.py
+curl https://nyaacaster.github.io/Nyaa-Automata/overload_p.py -o overload_p.py
 cd ..
 ```
 - overload_p.py这个脚本可以自己打开看一下，里面我把手动输入的变量全部写死了以便当自动脚本使用，目标网址可以根据自己情况调整
