@@ -12,14 +12,14 @@
 - [x] Python3
 
 - [x] Python3-pip
+- [x] [**TheSpeedX/PROXY-List**](https://github.com/TheSpeedX/PROXY-List)
 
 - [x] [**Leeon123/CC-attack**](https://github.com/Leeon123/CC-attack)
 
-- [x] [**TheSpeedX/PROXY-List**](https://github.com/TheSpeedX/PROXY-List)
+- [x] [**7zx/overload**](https://github.com/7zx/overload)
 
 - [x] [**NyaaCaster/HydaelynAttack**](https://github.com/NyaaCaster/HydaelynAttack)
 
-  *7zx/overload新版本不支持脚本配置方式和命令行附加方式，且其L7方案必须翻墙，故弃用
 
 ## 版本更新说明
 - 此前过于细节的进行了原理和操作说明，对一些朋友来说过于繁琐，现开始使用一键式部署和一键式执行方案
