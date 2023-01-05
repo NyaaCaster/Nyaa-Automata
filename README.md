@@ -79,7 +79,7 @@ H/20 * * * * bash ~/Nyaa-Automata/attack.sh
 - 例如：0,5,10 * * * * 这个例子代表每小时的0分 5分 10分各执行一次，合计每小时执行3次
 - 更多语法请阅读 [**Linux crontab命令 菜鸟教程**](https://www.runoob.com/linux/linux-comm-crontab.html)（我都看得懂，你一定没问题）
 
-## 如果想便捷的更换打击服务器的ip，可以使用v2ray的linu版本
+## 如果想便捷的更换打击服务器的ip，可以使用v2ray的linux版本
 -[**v2rayA**](https://v2raya.org/docs/prologue/installation/debian/)
 客户端为网页版，可以随时随地访问，不过请自备飞机场
 
