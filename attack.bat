@@ -21,7 +21,7 @@ echo ""
 echo "updata overload"
 cd overload
 git pull
-curl https://nyaacaster.github.io/Nyaa-Automata/overload_p.py -o overload/overload_p.py
+curl https://nyaacaster.github.io/Nyaa-Automata/overload_p.py -o overload_p.py
 cd ..
 
 echo ""
