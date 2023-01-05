@@ -7,7 +7,7 @@ import sys
 from colorama import Fore
 
 os.chdir(os.path.dirname(os.path.realpath(__file__)))
-os.system("cls" if os.name == "nt" else "clear")
+#os.system("cls" if os.name == "nt" else "clear")
 
 try:
     from tools.addons.checks import (
@@ -15,7 +15,7 @@ try:
         check_number_input,
         check_target_input,
     )
-    from tools.addons.logo import show_logo
+    #from tools.addons.logo import show_logo
     from tools.method import AttackMethod
 except (ImportError, NameError) as err:
     print("\nFailed to import something", err)
@@ -23,7 +23,7 @@ except (ImportError, NameError) as err:
 
 def main() -> None:
     """Run main application."""
-    show_logo()
+    #show_logo()
     try:
         method = "http"
         time = 60
