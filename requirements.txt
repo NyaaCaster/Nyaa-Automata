@@ -1,9 +1,9 @@
-requests
-pysocks
-scapy
+requests >= 2.28.1
+PySocks >= 1.7.1
+scapy >= 2.4.5
 wget
 argparse
-colorama
-humanfriendly
+colorama >= 0.4.5
+humanfriendly >= 10.0
 tqdm
 pyfiglet
