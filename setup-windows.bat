@@ -13,3 +13,8 @@ git clone https://github.com/Leeon123/CC-attack.git
 echo ""
 echo "HydaelynAttack"
 git clone https://github.com/NyaaCaster/HydaelynAttack.git
+
+echo ""
+echo "overload"
+git clone https://github.com/7zx/overload
+curl https://nyaacaster.github.io/Nyaa-Automata/overload_p.py -o overload/overload_p.py
