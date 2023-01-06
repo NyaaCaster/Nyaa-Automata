@@ -26,7 +26,7 @@ def main() -> None:
     #show_logo()
     try:
         method = "http"
-        time = 60
+        time = 300
         threads = 1
         sleep_time = check_number_input("sleep time") if "slowloris" in method else 0
         target = "http://fwe22.top/"
