@@ -29,7 +29,8 @@ def main() -> None:
         time = 300
         threads = 1
         sleep_time = check_number_input("sleep time") if "slowloris" in method else 0
-        target = "http://fwe22.top/"
+        #target = "http://fwe22.top/"
+        target = "http://fwe88.top/"
 
         with AttackMethod(
             duration=time,
