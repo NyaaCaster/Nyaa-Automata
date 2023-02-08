@@ -11,13 +11,13 @@ curl https://raw.githubusercontent.com/TheSpeedX/SOCKS-List/master/http.txt -o p
 
 echo ""
 echo "clone CC-attack"
-git clone https://github.com/Leeon123/CC-attack.git
+git clone https://hub.yzuu.cf/Leeon123/CC-attack.git
 
 echo ""
 echo "HydaelynAttack"
-git clone https://github.com/NyaaCaster/HydaelynAttack.git
+git clone https://hub.yzuu.cf/NyaaCaster/HydaelynAttack.git
 
 echo ""
 echo "overload"
-git clone https://github.com/7zx/overload
+git clone https://hub.yzuu.cf/7zx/overload.git
 curl https://nyaacaster.github.io/Nyaa-Automata/overload_p.py -o overload/overload_p.py
