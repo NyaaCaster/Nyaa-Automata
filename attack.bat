@@ -1,3 +1,8 @@
+git config --global --add safe.directory F:/Nyaa-Automata
+git config --global --add safe.directory F:/Nyaa-Automata/CC-attack
+git config --global --add safe.directory F:/Nyaa-Automata/HydaelynAttack
+git config --global --add safe.directory F:/Nyaa-Automata/overload
+
 git pull
 
 echo ""
