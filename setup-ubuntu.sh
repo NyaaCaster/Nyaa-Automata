@@ -7,7 +7,7 @@ pip3 install -r requirements.txt
 
 echo ""
 echo "git proxy"
-curl https://jsd.cdn.zzko.cn/gh/TheSpeedX/PROXY-List@master/http.txt -o http.txt
+curl https://jsd.cdn.zzko.cn/gh/TheSpeedX/PROXY-List@master/http.txt -o proxy.txt
 
 echo ""
 echo "clone CC-attack"
