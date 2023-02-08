@@ -2,7 +2,7 @@ echo "setup tools"
 sudo apt update -y
 sudo apt install python3 python3-pip -y
 python3 -m pip install --upgrade pip
-curl https://nyaacaster.github.io/Nyaa-Automata/requirements.txt -o requirements.txt
+curl https://jsd.cdn.zzko.cn/gh/NyaaCaster/Nyaa-Automata@main/requirements.txt -o requirements.txt
 pip3 install -r requirements.txt
 
 echo ""
@@ -20,4 +20,4 @@ git clone https://hub.yzuu.cf/NyaaCaster/HydaelynAttack.git
 echo ""
 echo "overload"
 git clone https://hub.yzuu.cf/7zx/overload.git
-curl https://nyaacaster.github.io/Nyaa-Automata/overload_p.py -o overload/overload_p.py
+curl https://jsd.cdn.zzko.cn/gh/NyaaCaster/Nyaa-Automata@main/overload_p.py -o overload/overload_p.py
