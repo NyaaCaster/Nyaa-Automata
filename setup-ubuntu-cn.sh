@@ -25,3 +25,6 @@ echo ""
 echo "overload"
 git clone https://hub.yzuu.cf/7zx/overload.git
 curl https://jsd.cdn.zzko.cn/gh/NyaaCaster/Nyaa-Automata@main/overload_p.py -o overload/overload_p.py
+cd overload/
+pip install -r requirements.txt
+cd ..
