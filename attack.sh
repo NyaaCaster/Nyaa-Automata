@@ -17,11 +17,12 @@ git pull
 python3 HydaelynAttack_p_once_noLog.py
 cd ..
 
-echo ""
-echo "overload"
-cd overload
-git pull
-curl https://jsd.cdn.zzko.cn/gh/NyaaCaster/Nyaa-Automata@main/overload_p.py -o overload_p.py
-curl https://nyaacaster.github.io/Nyaa-Automata@main/overload_p.py -o overload_p.py
-python3 overload_p.py
-cd ..
+#echo ""
+#echo "overload"
+#cd overload
+#git pull
+#curl https://jsd.cdn.zzko.cn/gh/NyaaCaster/Nyaa-Automata@main/overload_p.py -o overload_p.py
+#curl https://nyaacaster.github.io/Nyaa-Automata@main/overload_p.py -o overload_p.py
+#python3 overload_p.py
+#cd ..
+#
