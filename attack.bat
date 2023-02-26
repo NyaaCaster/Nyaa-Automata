@@ -20,11 +20,11 @@ cd HydaelynAttack
 git pull
 F:\Python310\python.exe HydaelynAttack_p_once_noLog.py
 cd ..
-
-echo ""
-echo "overload"
-cd overload
-git pull
-curl https://jsd.cdn.zzko.cn/gh/NyaaCaster/Nyaa-Automata@main/overload_p.py -o overload_p.py
-F:\Python310\python.exe overload_p.py
-cd ..
+::
+::echo ""
+::echo "overload"
+::cd overload
+::git pull
+::curl https://jsd.cdn.zzko.cn/gh/NyaaCaster/Nyaa-Automata@main/overload_p.py -o overload_p.py
+::F:\Python310\python.exe overload_p.py
+::cd ..
